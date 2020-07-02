@@ -41,7 +41,7 @@ INSERT INTO `Genres` VALUES (1, 'Comedy'),(2, 'Drama'),(3, 'Fiction');
 UNLOCK TABLES;
 
 --
--- Table structure for table `Clases_Student_Map`
+-- Table structure for table `Genres_Movie_Map`
 --
 
 DROP TABLE IF EXISTS `Genres_Movie_Map`;
