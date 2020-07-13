@@ -20,7 +20,15 @@
 				<td><form:input path="name" title="test1" alt="test2"/></td>
 			</tr>
 			<tr>
+				<td><form:label path="id">Id0</form:label></td>
+				<td><form:input path="id"/></td>
+			</tr>
+			<tr>
 				<td><form:label path="id">Id</form:label></td>
+				<td><form:input path="id"/></td>
+			</tr>
+			<tr>
+				<td><form:label path="id">Id2</form:label></td>
 				<td><form:input path="id"/></td>
 			</tr>
 			<tr>
@@ -39,5 +47,6 @@
 	<a href='/'>Back to home</a>
 	<br />
 	<%@ include file="tag/footer.jsp"%>
+	Git test1
 </body>
 </html>
