@@ -7,11 +7,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Movie title</title>
+<%@ include file="tag/header.jsp"%>
 </head>
 <body>
 	${errorMessage}</br>
 	${message}
-	
+	<%@ include file="tag/nav.jsp"%>	
 	<form:form method="POST" action="/insertMovie" modelAttribute="movie">
 		<table>
 			<tr>
@@ -37,5 +38,6 @@
 	</form:form>
 	<a href='/'>Back to home</a>
 	<br />
+	<%@ include file="tag/footer.jsp"%>
 </body>
 </html>
