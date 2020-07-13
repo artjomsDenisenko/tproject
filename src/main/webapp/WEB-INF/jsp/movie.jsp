@@ -39,5 +39,6 @@
 	<a href='/'>Back to home</a>
 	<br />
 	<%@ include file="tag/footer.jsp"%>
+	Git test1
 </body>
 </html>
