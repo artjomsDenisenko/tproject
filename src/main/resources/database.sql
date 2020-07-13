@@ -1,8 +1,5 @@
--- MySQL dump 10.13  Distrib 5.5.47, for debian-linux-gnu (x86_64)
---
 -- Host: localhost    Database: database_project
 -- ------------------------------------------------------
--- Server version	5.5.47-0ubuntu0.14.04.1-log
 
 drop database if exists database_project;
 create database database_project;
@@ -48,13 +45,12 @@ DROP TABLE IF EXISTS `Genres_Movie_Map`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Genres_Movie_Map` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `genreId` int(10) unsigned NOT NULL,
   `movieId` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`genreId`, `movieId`),
   KEY `FK_Genres_Movie_Map_1` (`genreId`),
   KEY `FK_Genres_Movie_Map_2` (`movieId`),
   CONSTRAINT `FK_Genres_Movie_Map_1` FOREIGN KEY (`genreId`) REFERENCES `Genres` (`id`),
   CONSTRAINT `FK_Genres_Movie_Map_2` FOREIGN KEY (`movieId`) REFERENCES `Movies` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
