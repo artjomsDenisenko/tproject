@@ -21,6 +21,8 @@
 			</tr>
 			<tr>
 				<td><form:label path="id">Id</form:label></td>
+								<td><form:label path="id">Id2</form:label></td>
+												<td><form:label path="id">Id3</form:label></td>
 				<td><form:input path="id"/></td>
 			</tr>
 			<tr>
