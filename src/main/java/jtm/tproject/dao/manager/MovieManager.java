@@ -15,6 +15,8 @@ public interface MovieManager{
 	
 	public List<Movie> findMovies(Movie genre);
 	
+	public List<Movie> findTop6();
+	
 	public Movie insertMovie(Movie movie);
 	
 	public List<Movie> findByGenres(List<Long> genresIds);

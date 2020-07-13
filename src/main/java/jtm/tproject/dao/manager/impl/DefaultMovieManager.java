@@ -2,6 +2,7 @@ package jtm.tproject.dao.manager.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 
@@ -50,5 +51,12 @@ public class DefaultMovieManager implements MovieManager {
 	public List<Movie> findByGenres(List<Long> genresIds){
 		
 		return movieRepository.findByGenre(genresIds);		
+	}
+	
+	@Override
+	public List<Movie> findTop6(){
+		List<Movie> results = new ArrayList<>();
+		movieRepository.findAll().forEach(results::add);
+		return results.stream().limit(6).collect(Collectors.toList());
 	}
 }

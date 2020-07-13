@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,9 +24,10 @@ public class MovieController {
 	MovieManager movieManger;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String homePage(@RequestParam(value = "name", required = false) String name, HttpServletRequest request,
-			HttpServletResponse response) {
-		List<Movie> movies = movieManger.findMovies(null);
+	public String homePage(HttpServletRequest request,
+			HttpServletResponse response, Model model) {
+		List<Movie> movies = movieManger.findTop6();
+		model.addAttribute("movies", movies);
 		response.setStatus(HttpServletResponse.SC_OK);
 		return "index";
 	}
