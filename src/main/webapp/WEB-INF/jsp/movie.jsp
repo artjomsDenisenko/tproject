@@ -6,13 +6,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Movie title</title>
-<%@ include file="tag/header.jsp"%>
+<title>Add Movie</title>
+<%@ include file="tag/header.jsp" %>  
 </head>
 <body>
+	<%@ include file="tag/nav.jsp" %>  
 	${errorMessage}</br>
 	${message}
-	<%@ include file="tag/nav.jsp"%>	
+
+	
 	<form:form method="POST" action="/insertMovie" modelAttribute="movie">
 		<table>
 			<tr>
@@ -20,17 +22,7 @@
 				<td><form:input path="name" title="test1" alt="test2"/></td>
 			</tr>
 			<tr>
-				<td><form:label path="id">Id0</form:label></td>
-				<td><form:input path="id"/></td>
-			</tr>
-			<tr>
 				<td><form:label path="id">Id</form:label></td>
-								<td><form:label path="id">Id2</form:label></td>
-												<td><form:label path="id">Id3</form:label></td>
-				<td><form:input path="id"/></td>
-			</tr>
-			<tr>
-				<td><form:label path="id">Id2</form:label></td>
 				<td><form:input path="id"/></td>
 			</tr>
 			<tr>
@@ -46,9 +38,6 @@
 		</table>
 	
 	</form:form>
-	<a href='/'>Back to home</a>
-	<br />
-	<%@ include file="tag/footer.jsp"%>
-	Git test1
+	<%@ include file="tag/footer.jsp" %>  
 </body>
 </html>
