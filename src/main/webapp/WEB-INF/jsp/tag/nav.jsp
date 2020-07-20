@@ -4,7 +4,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <div
 	class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-	<h5 class="my-0 mr-md-auto font-weight-normal">Movie DB</h5>
+	<h5 class="my-0 mr-md-auto font-weight-normal"><a href="/">Movie DB</a></h5>
 	<h2 class="my-0 mr-md-auto font-weight-normal">
 		Welcome back,
 		<sec:authentication property="name" />
@@ -17,7 +17,7 @@
 		<a class="p-2 text-dark" href="/findMovie">Find movie</a>
 
 		<sec:authorize access="!isAuthenticated()">
-			<a class="p-2 text-dark" href="#">Login</a>
+			<a class="p-2 text-dark" href="/login">Login</a>
 		</sec:authorize>
 		<sec:authorize access="isAuthenticated()">
 			<a class="p-2 text-dark" href="/logout">Logout</a>
